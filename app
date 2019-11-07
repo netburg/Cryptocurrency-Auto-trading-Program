@@ -1,9 +1,9 @@
-# Monitor market price changes every 30 seconds
-# For whose price goes down more than 1%，buy;
-# Sell it at a higher price once the buy order completed;
-# Monitor those increased more than 8% in one day;
-# Stop buying if contineously bought for 4 times on one currency;
-# Warning: this model may be risky, those who use this model, bear your risk by yourself.
+# Monitor market price changes every 30 seconds (can be changed according to market liquidity)
+# For whose price goes down more than 1%，execute buy order;
+# Sell it at a higher price once the buy order was completed, the sell price could be lower than 30s ago but higher than buy price + fees;
+# Monitor those increased more than 8% in one day because these currencies are more liquid;
+# Stop buying one currency if contineously executed buy order for 4 times, control the down turn risk;
+# Warning: this model may still be risky, those who use this model, bear your risk by yourself.
 
 import os
 import ccxt
