@@ -311,7 +311,7 @@ class MyBinance(object):
             total_asset_0 = self.usd_asset
         if count > 0:
             total_asset_1 = self.usd_asset
-            roe = (total_asset_1 - total_asset_0) / total_asset_0
+            roe = 100 * (total_asset_1 - total_asset_0) / total_asset_0
             usd_increase = total_asset_1 - total_asset_0
 
         print('{0}{1}'.format('Account used balance detail:  ', self.balance_result[1]), file=f)
